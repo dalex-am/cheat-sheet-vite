@@ -2,6 +2,8 @@
   "files": [],
   "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
   "compilerOptions": {
-    "jsxImportSource": "@emotion/react"
+    "lib": ["ESNext.Array", "ESNext", "ES2020", "DOM", "DOM.Iterable"],
+    "jsxImportSource": "@emotion/react",
+    "module": "ESNext"
   }
 }

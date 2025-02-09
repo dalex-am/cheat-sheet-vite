@@ -23,6 +23,7 @@ export default tseslint.config(
       "prefer-const": "error",
       "no-console": "error",
       "@typescript-eslint/no-unused-vars": "error",
+      allowInterfaces: false,
     },
   },
 );
