@@ -37,8 +37,8 @@ export const VSE: FC = () => {
         fitView
       >
         <Background />
-        <MiniMap position='bottom-left' />
-        <Controls showInteractive={false} orientation='horizontal' position='bottom-right' />
+        <MiniMap position="bottom-left" />
+        <Controls showInteractive={false} orientation="horizontal" position="bottom-right" />
       </ReactFlow>
     </Layout>
   );

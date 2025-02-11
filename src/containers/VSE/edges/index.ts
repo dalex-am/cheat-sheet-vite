@@ -1,14 +1,8 @@
 import { MarkerType, type Edge, type EdgeTypes } from "@xyflow/react";
 
 const markerEnd = {
-  type:  MarkerType.Arrow,
-  // color?: string;
-  // width?: number;
-  // height?: number;
-  // markerUnits?: string;
-  // orient?: string;
-  // strokeWidth?: number;
-}
+  type: MarkerType.Arrow,
+};
 
 export const initialEdges = [
   { id: "a->c", source: "a", target: "c", animated: true, markerEnd },

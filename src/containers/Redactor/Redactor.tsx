@@ -23,8 +23,8 @@ export const Redactor: FC = () => {
                   <body>${html}</body>
                   <script>${js}</script>
                 </html>`}
-        title='iframe'
-        sandbox='allow-scripts'
+        title="iframe"
+        sandbox="allow-scripts"
         css={{ marginTop: "12px" }}
       />
     </Layout>
