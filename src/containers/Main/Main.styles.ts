@@ -9,12 +9,17 @@ export const wrapperStyle: Interpolation = {
 export const routesStyle: Interpolation = {
   display: "flex",
   gap: 12,
-  padding: "8px 12px",
-  height: "24px",
+  padding: "0 8px",
+  height: "38px",
+  overflow: "auto hidden",
+  alignItems: "center",
 };
 
 export const getRouteStyle = (isActive: boolean): Interpolation => ({
   display: "flex",
   flexShrink: 0,
-  borderBottom: isActive ? "1px solid red" : undefined,
+  borderBottom: isActive ? "1px solid #646cff" : undefined,
+  height: "22px",
+  lineHeight: "22px",
+  boxSizing: "border-box",
 });

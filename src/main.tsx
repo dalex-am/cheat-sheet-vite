@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")!).render(
     <Routes>
       <Route path="/" element={<Main />}>
         <Route index element={<Greeting />} />
-        <Route path="/redactor" element={<Redactor />} />
+        <Route path="/monaco" element={<Redactor />} />
         <Route path="/vse" element={<VSE />} />
         <Route path="/git" element={<Git />} />
         <Route path="/*" element={<div>404</div>} />

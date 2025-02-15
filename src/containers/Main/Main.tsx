@@ -3,8 +3,8 @@ import { Link, matchPath, Outlet, useLocation } from "react-router";
 import { getRouteStyle, routesStyle, wrapperStyle } from "./Main.styles";
 
 const routes: { priority: number; to: string; label: string; icon?: React.ReactSVGElement }[] = [
-  { label: "React-flow", to: "vse", priority: 1 },
-  { label: "Редактор кода", to: "redactor", priority: 2 },
+  { label: "React-flow", to: "/vse", priority: 1 },
+  { label: "Monaco", to: "/monaco", priority: 2 },
   { label: "Домой", to: "/", priority: 0 },
   { label: "Git", to: "/git", priority: 3 },
 ];
