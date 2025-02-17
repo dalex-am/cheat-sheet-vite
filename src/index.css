@@ -32,3 +32,41 @@ a {
   background-color: #74b9ff;
   border-radius: 10px;
 }
+
+pre,
+pre code {
+  /* background-color: var(--color-code-background); */
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.2;
+  tab-size: 2;
+  hyphens: none;
+}
+
+pre {
+  /* margin: 0; */
+  display: grid;
+}
+
+pre > code {
+  float: left;
+  width: calc(100% - 16px);
+  padding: 8px 6px !important;
+}
+
+.code-line {
+  border-left: 4px solid transparent;
+  display: inline-block;
+}
+
+.numbered-code-line::before {
+  content: attr(data-line-number);
+  margin-left: -8px;
+  margin-right: 16px;
+  width: 1rem;
+  text-align: right;
+  display: inline-block;
+}

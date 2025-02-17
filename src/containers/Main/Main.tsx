@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { type FC } from "react";
 import { Link, matchPath, Outlet, useLocation } from "react-router";
 import { getRouteStyle, routesStyle, wrapperStyle } from "./Main.styles";
 
