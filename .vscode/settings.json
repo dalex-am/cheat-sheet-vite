@@ -23,5 +23,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terminal.explorerKind": "both",
-  "eslint.useFlatConfig": true
+  "eslint.useFlatConfig": true,
+  "cSpell.language": "en,ru"
 }

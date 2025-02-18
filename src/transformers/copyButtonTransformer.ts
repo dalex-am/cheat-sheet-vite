@@ -66,7 +66,7 @@ export function transformerCopyButton(
 
 function copyButtonStyle({
   copyIcon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBkYXRhLW5hbWU9IjEiIGlkPSJfMSI+PHBhdGggZD0iTTMwOC41MSw0NTBIODAuNTlhMTUsMTUsMCwwLDEtMTUtMTVWMTQzLjkzYTE1LDE1LDAsMCwxLDE1LTE1SDMwOC41MWExNSwxNSwwLDAsMSwxNSwxNVY0MzVBMTUsMTUsMCwwLDEsMzA4LjUxLDQ1MFpNOTUuNTksNDIwSDI5My41MVYxNTguOTNIOTUuNTlaIi8+PHBhdGggZD0iTTM4OS40NCwzNjkuMDdIMzA4LjUxYTE1LDE1LDAsMCwxLDAtMzBoNjUuOTNWNzhIMTc2LjUydjY1LjkyYTE1LDE1LDAsMCwxLTMwLDBWNjNhMTUsMTUsMCwwLDEsMTUtMTVIMzg5LjQ0YTE1LDE1LDAsMCwxLDE1LDE1VjM1NC4wN0ExNSwxNSwwLDAsMSwzODkuNDQsMzY5LjA3WiIvPjwvZz48L3N2Zz4=",
-  successIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2366ff85' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E",
+  successIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E",
   visibility = "hover",
 }: {
   copyIcon?: string;
@@ -94,12 +94,12 @@ function copyButtonStyle({
       top: 1px;
       right: 1px;
       padding: 0;
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       display: flex;
       cursor: pointer;
-      margin-top: 8px;
-      margin-right: 8px;
+      margin-top: 4px;
+      margin-right: 4px;
       position: absolute;
       & span {
         width: 100%;

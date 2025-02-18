@@ -29,13 +29,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #74b9ff;
+  background-color: #bcbdcb;
   border-radius: 10px;
 }
 
 pre,
 pre code {
-  /* background-color: var(--color-code-background); */
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -47,13 +46,10 @@ pre code {
 }
 
 pre {
-  /* margin: 0; */
   display: grid;
 }
 
 pre > code {
-  float: left;
-  width: calc(100% - 16px);
   padding: 8px 6px !important;
 }
 

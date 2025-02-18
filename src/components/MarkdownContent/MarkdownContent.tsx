@@ -18,7 +18,7 @@ import {
 import { isNull } from "lodash";
 import { mdWrapperStyle } from "./MarkdownContent.styles";
 
-export const MarkdownContent: FC<IMarkdownContent> = ({ content }) => {
+export const MarkdownContent: FC<IMarkdownContent> = ({ content, extraStyle }) => {
   const [code, setCode] = useState<JSX.Element | null>(null);
 
   const getCode = useCallback(async (content: string) => {
@@ -52,5 +52,5 @@ export const MarkdownContent: FC<IMarkdownContent> = ({ content }) => {
     }
   }, [code]);
 
-  return <div css={mdWrapperStyle}>{code}</div>;
+  return <div css={[mdWrapperStyle, extraStyle]}>{code}</div>;
 };
