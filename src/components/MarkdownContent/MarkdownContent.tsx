@@ -16,6 +16,7 @@ import {
   transformerCopyButton,
 } from "../../transformers/copyButtonTransformer";
 import { isNull } from "lodash";
+import { mdWrapperStyle } from "./MarkdownContent.styles";
 
 export const MarkdownContent: FC<IMarkdownContent> = ({ content }) => {
   const [code, setCode] = useState<JSX.Element | null>(null);
@@ -51,5 +52,5 @@ export const MarkdownContent: FC<IMarkdownContent> = ({ content }) => {
     }
   }, [code]);
 
-  return <>{code}</>;
+  return <div css={mdWrapperStyle}>{code}</div>;
 };
