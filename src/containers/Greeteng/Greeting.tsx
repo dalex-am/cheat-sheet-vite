@@ -1,12 +1,6 @@
 import type { FC } from "react";
 import { Layout } from "../../components/Layout/Layout";
-import { MarkdownContent } from "../../components/MarkdownContent/MarkdownContent";
-import md from "../../markdowns/async-deffer-scripts/async-deffer-scripts.md?raw";
 
 export const Greeting: FC = () => {
-  return (
-    <Layout>
-      <MarkdownContent content={md} />
-    </Layout>
-  );
+  return <Layout>Приветствие</Layout>;
 };
