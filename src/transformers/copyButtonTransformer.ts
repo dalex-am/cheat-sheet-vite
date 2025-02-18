@@ -1,50 +1,16 @@
-// import type { ShikiTransformer } from 'npm:shiki@^1.22.2';
 import { ShikiTransformer } from "shiki";
-// import { trimWhitespace } from './utilities/index.ts';
-const whitespaceRegEx = /\s*\n\s*/g;
-
-export const trimWhitespace = (input: string) => input.replaceAll(whitespaceRegEx, "").trim();
 
 interface CopyButtonOptions {
   feedbackDuration?: number;
   copyIcon?: string;
   successIcon?: string;
   visibility?: "hover" | "always";
-  jsx?: boolean;
 }
 
-/**
- * A transformer that adds a copy button to code blocks.
- * @param {Object} options - Options for the copy button behavior and appearance.
- * @param {number} options.feedbackDuration - The duration in milliseconds to show the success icon after copying.
- * @param {string} options.copyIcon - Either data URL svg or inline svg for the copy icon.
- * @param {string} options.successIcon - Either data URL svg or inline svg for the success icon.
- * @returns A Shiki transformer.
- *
- * find icons at https://icones.js.org - copy the "Data URL" and paste it as the value of `copyIcon` and/or `successIcon`.
- *
- * @example
- * ```ts
- * import { codeToHtml } from 'shiki'
- * import { transformerCopyButton } from '@rehype-pretty/copy-button'
- *
- * const html = await codeToHtml(`console.log('hello, world')`, {
- *   lang: 'ts',
- *   theme: 'houston',
- *   transformers: [
- *     transformerCopyButton({
- *       visibility: 'always',
- *       feedbackDuration: 2_000,
- *     }),
- *   ],
- * })
- * ```
- */
 export function transformerCopyButton(
   options: CopyButtonOptions = {
     visibility: "hover",
     feedbackDuration: 3_000,
-    jsx: false,
   },
 ): ShikiTransformer {
   return {
@@ -99,7 +65,7 @@ export function transformerCopyButton(
 }
 
 function copyButtonStyle({
-  copyIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23adadad' d='M16.187 9.5H12.25a1.75 1.75 0 0 0-1.75 1.75v28.5c0 .967.784 1.75 1.75 1.75h23.5a1.75 1.75 0 0 0 1.75-1.75v-28.5a1.75 1.75 0 0 0-1.75-1.75h-3.937a4.25 4.25 0 0 1-4.063 3h-7.5a4.25 4.25 0 0 1-4.063-3M31.813 7h3.937A4.25 4.25 0 0 1 40 11.25v28.5A4.25 4.25 0 0 1 35.75 44h-23.5A4.25 4.25 0 0 1 8 39.75v-28.5A4.25 4.25 0 0 1 12.25 7h3.937a4.25 4.25 0 0 1 4.063-3h7.5a4.25 4.25 0 0 1 4.063 3M18.5 8.25c0 .966.784 1.75 1.75 1.75h7.5a1.75 1.75 0 1 0 0-3.5h-7.5a1.75 1.75 0 0 0-1.75 1.75'/%3E%3C/svg%3E",
+  copyIcon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48ZyBkYXRhLW5hbWU9IjEiIGlkPSJfMSI+PHBhdGggZD0iTTMwOC41MSw0NTBIODAuNTlhMTUsMTUsMCwwLDEtMTUtMTVWMTQzLjkzYTE1LDE1LDAsMCwxLDE1LTE1SDMwOC41MWExNSwxNSwwLDAsMSwxNSwxNVY0MzVBMTUsMTUsMCwwLDEsMzA4LjUxLDQ1MFpNOTUuNTksNDIwSDI5My41MVYxNTguOTNIOTUuNTlaIi8+PHBhdGggZD0iTTM4OS40NCwzNjkuMDdIMzA4LjUxYTE1LDE1LDAsMCwxLDAtMzBoNjUuOTNWNzhIMTc2LjUydjY1LjkyYTE1LDE1LDAsMCwxLTMwLDBWNjNhMTUsMTUsMCwwLDEsMTUtMTVIMzg5LjQ0YTE1LDE1LDAsMCwxLDE1LDE1VjM1NC4wN0ExNSwxNSwwLDAsMSwzODkuNDQsMzY5LjA3WiIvPjwvZz48L3N2Zz4=",
   successIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2366ff85' d='M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41z'/%3E%3C/svg%3E",
   visibility = "hover",
 }: {
@@ -107,7 +73,7 @@ function copyButtonStyle({
   successIcon?: string;
   visibility?: "hover" | "always";
 } = {}) {
-  let copyButtonStyle = /* css */ `
+  let copyButtonStyle = `
     :root {
       --copy-icon: url("${copyIcon}");
       --success-icon: url("${successIcon}");
@@ -135,14 +101,13 @@ function copyButtonStyle({
       margin-top: 8px;
       margin-right: 8px;
       position: absolute;
-      border-radius: 25%;
       & span {
         width: 100%;
         aspect-ratio: 1 / 1;
         background-repeat: no-repeat;
       }
       & .ready {
-        background-image: var(--copy-icon);
+        background: no-repeat 2px 1px/88% var(--copy-icon);
       }
       & .success {
         display: none;
@@ -181,10 +146,6 @@ function copyButtonStyle({
   return copyButtonStyle;
 }
 
-/**
- * Registers the copy button event listener
- * to be used in jsx environments.
- */
 export function registerCopyButton() {
   if (typeof document === "undefined") {
     return;
