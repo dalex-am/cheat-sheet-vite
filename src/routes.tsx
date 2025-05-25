@@ -6,6 +6,7 @@ import { Redactor } from "./containers/Redactor/Redactor";
 import { VSE } from "./containers/VSE/VSE";
 import { Git } from "./containers/Git/Git";
 import { AsyncDefer } from "./containers/AsyncDefer/AsyncDefer";
+import { CssAnimations } from "./containers/CssAnimations/CssAnimations";
 
 export const AppRoutes: FC = () => {
   return (
@@ -16,6 +17,7 @@ export const AppRoutes: FC = () => {
         <Route path="/vse" element={<VSE />} />
         <Route path="/git" element={<Git />} />
         <Route path="/async-defer" element={<AsyncDefer />} />
+        <Route path="/css-animations" element={<CssAnimations />} />
         <Route path="/*" element={<div>404</div>} />
       </Route>
     </Routes>
