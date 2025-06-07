@@ -9,6 +9,8 @@ const routes: { priority: number; to: string; label: string; icon?: React.ReactS
   { label: "Git", to: "/git", priority: 3 },
   { label: "Async-defer", to: "/async-defer", priority: 4 },
   { label: "CSS-анимации", to: "/css-animations", priority: 5 },
+  { label: "npm, yarn", to: "/npm-yarn", priority: 6 },
+  { label: "CI/CD", to: "/ci-cd", priority: 7 },
 ];
 
 export const Main: FC = () => {

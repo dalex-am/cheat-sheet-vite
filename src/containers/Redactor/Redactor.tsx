@@ -8,21 +8,18 @@ import {
   tabsStyle,
   wrapperStyle,
 } from "./Redactor.styles";
-import { Interpolation } from "@emotion/react";
+import { IRedactorProps, TTabs } from "./Redactor.types";
 
 const initialHtml = "<div>Hello world!</div>";
 const initialCss = `div {
     color: #646cff
 }`;
 
-export const Redactor: FC<{
-  initialHtml?: string;
-  initialCss?: string;
-  layoutStyle?: Interpolation;
-}> = ({ initialCss: cssProp, initialHtml: htmlProp, layoutStyle }) => {
+export const Redactor: FC<IRedactorProps> = (props) => {
+  const { initialCss: cssProp, initialHtml: htmlProp, layoutStyle, defaultTab } = props;
   const [html, setHtml] = useState<string | undefined>(htmlProp ?? initialHtml);
   const [css, setCss] = useState<string | undefined>(cssProp ?? initialCss);
-  const [activeTab, setActiveTab] = useState<"html" | "css">("html");
+  const [activeTab, setActiveTab] = useState<TTabs>(defaultTab ?? "html");
 
   const isHtml = activeTab === "html";
 

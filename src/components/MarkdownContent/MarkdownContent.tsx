@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useState } from "react";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeHighlightCodeLines from "rehype-highlight-code-lines";
 import rehypeSanitize from "rehype-sanitize";
@@ -24,6 +25,7 @@ export const MarkdownContent: FC<IMarkdownContent> = ({ content, extraStyle }) =
   const getCode = useCallback(async (content: string) => {
     const md = await unified()
       .use(remarkParse)
+      .use(remarkGfm)
       .use(remarkRehype)
       .use(rehypeSanitize)
       .use(rehypeStringify)

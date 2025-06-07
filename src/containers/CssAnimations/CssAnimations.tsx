@@ -33,6 +33,7 @@ export const CssAnimations: FC = () => {
         initialHtml={transitionHtml}
         initialCss={transitionCss}
         layoutStyle={{ height: "300px" }}
+        defaultTab="css"
       />
     </Layout>
   );
