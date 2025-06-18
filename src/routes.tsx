@@ -9,6 +9,7 @@ import { AsyncDefer } from "./containers/AsyncDefer/AsyncDefer";
 import { CssAnimations } from "./containers/CssAnimations/CssAnimations";
 import { NpmYarn } from "./containers/NpmYarn/NpmYarn";
 import { CiCd } from "./containers/CiCd/CiCd";
+import { Solid } from "./containers/Solid/Solid";
 
 export const AppRoutes: FC = () => {
   return (
@@ -22,6 +23,7 @@ export const AppRoutes: FC = () => {
         <Route path="/css-animations" element={<CssAnimations />} />
         <Route path="/npm-yarn" element={<NpmYarn />} />
         <Route path="/ci-cd" element={<CiCd />} />
+        <Route path="/solid" element={<Solid />} />
         <Route path="/*" element={<div>404</div>} />
       </Route>
     </Routes>

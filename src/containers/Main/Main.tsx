@@ -11,6 +11,7 @@ const routes: { priority: number; to: string; label: string; icon?: React.ReactS
   { label: "CSS-анимации", to: "/css-animations", priority: 5 },
   { label: "npm, yarn", to: "/npm-yarn", priority: 6 },
   { label: "CI/CD", to: "/ci-cd", priority: 7 },
+  { label: "SOLID", to: "/solid", priority: 8 },
 ];
 
 export const Main: FC = () => {
