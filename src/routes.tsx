@@ -11,6 +11,7 @@ import { NpmYarn } from "./containers/NpmYarn/NpmYarn";
 import { CiCd } from "./containers/CiCd/CiCd";
 import { Solid } from "./containers/Solid/Solid";
 import { Prototypes } from "./containers/Prototypes/Prototypes";
+import { AtRules } from "./containers/AtRules/AtRules";
 
 export const AppRoutes: FC = () => {
   return (
@@ -26,6 +27,7 @@ export const AppRoutes: FC = () => {
         <Route path="/ci-cd" element={<CiCd />} />
         <Route path="/solid" element={<Solid />} />
         <Route path="/proto" element={<Prototypes />} />
+        <Route path="/at-rules" element={<AtRules />} />
         <Route path="/*" element={<div>404</div>} />
       </Route>
     </Routes>

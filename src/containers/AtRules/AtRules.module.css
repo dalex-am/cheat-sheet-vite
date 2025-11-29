@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "TildaSans";
+  src: url("../../../public/fonts/TildaSans-VF.ttf");
+}
+
+.wrapper {
+  font-family: "TildaSans";
+}
