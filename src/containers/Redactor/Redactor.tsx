@@ -9,6 +9,7 @@ import {
   wrapperStyle,
 } from "./Redactor.styles";
 import { IRedactorProps, TTabs } from "./Redactor.types";
+import { useDelayedValue } from "../../hooks/useDelayedValue";
 
 const initialHtml = "<div>Hello world!</div>";
 const initialCss = `div {
@@ -20,6 +21,9 @@ export const Redactor: FC<IRedactorProps> = (props) => {
   const [html, setHtml] = useState<string | undefined>(htmlProp ?? initialHtml);
   const [css, setCss] = useState<string | undefined>(cssProp ?? initialCss);
   const [activeTab, setActiveTab] = useState<TTabs>(defaultTab ?? "html");
+
+  const delayedHtml = useDelayedValue(html);
+  const delayedCss = useDelayedValue(css);
 
   const isHtml = activeTab === "html";
 
@@ -46,7 +50,7 @@ export const Redactor: FC<IRedactorProps> = (props) => {
         </div>
 
         <iframe
-          srcDoc={`<html><style>${css}</style><body>${html}</body></html>`}
+          srcDoc={`<html><style>${delayedCss}</style><body>${delayedHtml}</body></html>`}
           title="iframe"
           sandbox="allow-scripts"
           css={iframeStyle}
