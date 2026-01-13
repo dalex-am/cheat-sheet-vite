@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { Link, matchPath, Outlet, useLocation } from "react-router";
 import { getRouteStyle, routesStyle, wrapperStyle } from "./Main.styles";
+import { protectedRoutesPath } from "../ProtectedRoutes/ProtectedRoutes";
 
 const routes: { priority: number; to: string; label: string; icon?: React.ReactSVGElement }[] = [
   { label: "React-flow", to: "/vse", priority: 1 },
@@ -14,6 +15,7 @@ const routes: { priority: number; to: string; label: string; icon?: React.ReactS
   { label: "SOLID", to: "/solid", priority: 8 },
   { label: "Прототипы", to: "/proto", priority: 9 },
   { label: "@-правила в CSS", to: "/at-rules", priority: 10 },
+  { label: "Защищённые (частные) маршруты", to: protectedRoutesPath, priority: 11 },
 ];
 
 export const Main: FC = () => {
