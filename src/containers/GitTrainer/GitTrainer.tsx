@@ -1,8 +1,8 @@
 import type { FC } from "react";
-import { iframeStyle } from "./Git.styles";
-import { IGitProps } from "./Git.types";
+import { iframeStyle } from "./GitTrainer.styles";
+import { IGitTrainerProps } from "./GitTrainer.types";
 
-export const Git: FC<IGitProps> = () => {
+export const GitTrainer: FC<IGitTrainerProps> = () => {
   return (
     <iframe
       src="https://learngitbranching.js.org/?locale=ru_RU&NODEMO"

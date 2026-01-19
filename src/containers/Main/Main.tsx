@@ -6,7 +6,7 @@ const routes: { priority: number; to: string; label: string; icon?: React.ReactS
   { label: "React-flow", to: "/vse", priority: 1 },
   { label: "Monaco", to: "/monaco", priority: 2 },
   { label: "Домой", to: "/", priority: 0 },
-  { label: "Git", to: "/git", priority: 3 },
+  { label: "Тренажёр Git", to: "/git-rebase", priority: 3 },
   { label: "Async-defer", to: "/async-defer", priority: 4 },
   { label: "CSS-анимации", to: "/css-animations", priority: 5 },
   { label: "npm, yarn", to: "/npm-yarn", priority: 6 },

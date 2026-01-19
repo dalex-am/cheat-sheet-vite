@@ -4,7 +4,7 @@ import { Main } from "./containers/Main/Main";
 import { Greeting } from "./containers/Greeteng/Greeting";
 import { Redactor } from "./containers/Redactor/Redactor";
 import { VSE } from "./containers/VSE/VSE";
-import { Git } from "./containers/Git/Git";
+import { GitTrainer } from "./containers/GitTrainer/GitTrainer";
 import { AsyncDefer } from "./containers/AsyncDefer/AsyncDefer";
 import { CssAnimations } from "./containers/CssAnimations/CssAnimations";
 import { NpmYarn } from "./containers/NpmYarn/NpmYarn";
@@ -20,7 +20,7 @@ export const AppRoutes: FC = () => {
         <Route index element={<Greeting />} />
         <Route path="/monaco" element={<Redactor />} />
         <Route path="/vse" element={<VSE />} />
-        <Route path="/git" element={<Git />} />
+        <Route path="/git-rebase" element={<GitTrainer />} />
         <Route path="/async-defer" element={<AsyncDefer />} />
         <Route path="/css-animations" element={<CssAnimations />} />
         <Route path="/npm-yarn" element={<NpmYarn />} />
