@@ -12,6 +12,7 @@ import { CiCd } from "./containers/CiCd/CiCd";
 import { Solid } from "./containers/Solid/Solid";
 import { Prototypes } from "./containers/Prototypes/Prototypes";
 import { AtRules } from "./containers/AtRules/AtRules";
+import { Git } from "./containers/Git/Git";
 
 export const AppRoutes: FC = () => {
   return (
@@ -20,6 +21,7 @@ export const AppRoutes: FC = () => {
         <Route index element={<Greeting />} />
         <Route path="/monaco" element={<Redactor />} />
         <Route path="/vse" element={<VSE />} />
+        <Route path="/git" element={<Git />} />
         <Route path="/git-rebase" element={<GitTrainer />} />
         <Route path="/async-defer" element={<AsyncDefer />} />
         <Route path="/css-animations" element={<CssAnimations />} />
