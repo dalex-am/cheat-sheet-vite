@@ -4,7 +4,7 @@ import { Main } from "./containers/Main/Main";
 import { Greeting } from "./containers/Greeteng/Greeting";
 import { Redactor } from "./containers/Redactor/Redactor";
 import { VSE } from "./containers/VSE/VSE";
-import { Git } from "./containers/Git/Git";
+import { GitTrainer } from "./containers/GitTrainer/GitTrainer";
 import { AsyncDefer } from "./containers/AsyncDefer/AsyncDefer";
 import { CssAnimations } from "./containers/CssAnimations/CssAnimations";
 import { NpmYarn } from "./containers/NpmYarn/NpmYarn";
@@ -21,6 +21,7 @@ import {
 import { AdminPage } from "./containers/ProtectedRoutes/AdminPage/AdminPage";
 import { AuthPage } from "./containers/ProtectedRoutes/AuthPage/AuthPage";
 import { MainPage } from "./containers/ProtectedRoutes/MainPage/MainPage";
+import { Git } from "./containers/Git/Git";
 
 export const AppRoutes: FC = () => {
   const routes = useRoutes([
@@ -32,6 +33,7 @@ export const AppRoutes: FC = () => {
         { index: true, element: <Greeting /> },
         { path: "/vse", element: <VSE /> },
         { path: "/git", element: <Git /> },
+        { path: "/git-rebase", element: <GitTrainer /> },
         { path: "/async-defer", element: <AsyncDefer /> },
         { path: "/css-animations", element: <CssAnimations /> },
         { path: "/npm-yarn", element: <NpmYarn /> },

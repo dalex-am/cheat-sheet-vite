@@ -1,14 +1,12 @@
-import type { FC } from "react";
-import { iframeStyle } from "./Git.styles";
-import { IGitProps } from "./Git.types";
+import { type FC } from "react";
+import { Layout } from "../../components/Layout/Layout";
+import { MarkdownContent } from "../../components/MarkdownContent/MarkdownContent";
+import md from "../../markdowns/git/git.md?raw";
 
-export const Git: FC<IGitProps> = () => {
+export const Git: FC = () => {
   return (
-    <iframe
-      src="https://learngitbranching.js.org/?locale=ru_RU&NODEMO"
-      title="iframe"
-      sandbox="allow-same-origin allow-scripts"
-      css={iframeStyle}
-    />
+    <Layout>
+      <MarkdownContent content={md} />
+    </Layout>
   );
 };
