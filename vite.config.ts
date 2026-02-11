@@ -10,5 +10,8 @@ export default defineConfig({
       },
     }),
   ],
+  html: {
+    cspNonce: "CSP_PLACEHOLDER",
+  },
   assetsInclude: ["**/*.md"],
 });
