@@ -7,7 +7,7 @@ export const GitTrainer: FC<IGitTrainerProps> = () => {
     <iframe
       src="https://learngitbranching.js.org/?locale=ru_RU&NODEMO"
       title="iframe"
-      sandbox="allow-same-origin allow-scripts"
+      sandbox="allow-same-origin allow-scripts allow-popups"
       css={iframeStyle}
     />
   );
