@@ -22,6 +22,7 @@ import { AdminPage } from "./containers/ProtectedRoutes/AdminPage/AdminPage";
 import { AuthPage } from "./containers/ProtectedRoutes/AuthPage/AuthPage";
 import { MainPage } from "./containers/ProtectedRoutes/MainPage/MainPage";
 import { Git } from "./containers/Git/Git";
+import { BEM } from "./containers/BEM/BEM";
 
 export const AppRoutes: FC = () => {
   const routes = useRoutes([
@@ -41,6 +42,7 @@ export const AppRoutes: FC = () => {
         { path: "/solid", element: <Solid /> },
         { path: "/proto", element: <Prototypes /> },
         { path: "/at-rules", element: <AtRules /> },
+        { path: "/bem", element: <BEM /> },
         {
           path: protectedRoutesPath,
           element: <ProtectedRoutes />,

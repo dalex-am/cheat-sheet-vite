@@ -16,7 +16,8 @@ const routes: { priority: number; to: string; label: string; icon?: React.ReactS
   { label: "SOLID", to: "/solid", priority: 8 },
   { label: "Прототипы", to: "/proto", priority: 9 },
   { label: "@-правила в CSS", to: "/at-rules", priority: 10 },
-  { label: "Защищённые (частные) маршруты", to: protectedRoutesPath, priority: 11 },
+  { label: "БЭМ", to: "/bem", priority: 11 },
+  { label: "Защищённые (частные) маршруты", to: protectedRoutesPath, priority: 12 },
 ];
 
 export const Main: FC = () => {
